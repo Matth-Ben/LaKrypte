@@ -165,10 +165,3 @@ class StarterSite extends Timber\Site {
 }
 
 new StarterSite();
-
-
-add_action('after_setup_theme', 'language_theme_setup');
-function language_theme_setup()
-{
-    load_child_theme_textdomain('eopur', get_stylesheet_directory() . '/languages');
-}
