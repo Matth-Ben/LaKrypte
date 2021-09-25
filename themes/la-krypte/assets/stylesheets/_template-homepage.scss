@@ -1,0 +1,12 @@
+#template-homepage {
+  .page {
+    &--content {}
+    &--body {
+      position: initial;
+      width: 100%;
+      &--thumbnail {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,15 +1,18 @@
 .header {
   background-color: transparent;
-  //position: absolute;
-  //top: 0;
-  //left: 0;
+  position: absolute;
+  left: 0;
   .wrapper {
     display: flex;
     height: 100px;
     align-items: center;
   }
   &--logo {
+    align-items: center;
     background-color: white;
+    display: flex;
+    height: 100%;
+    justify-content: center;
     text-align: center;
     width: 225px;
     &--link {
@@ -28,12 +31,14 @@
     color: white;
     height: 100%;
     &--list {
-      display: inline-block;
+      display: flex;
       height: 100%;
       list-style: none;
       margin: 0;
       padding: 0;
       &--item {
+        border-left: 1px solid white;
+        border-right: 1px solid white;
         height: 100%;
         transition: .4s;
         &--link {
