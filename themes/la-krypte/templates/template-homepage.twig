@@ -19,13 +19,16 @@
                                     <h5 class="slide--artiste--item--text">Petit text en plus</h5>
                                     <div class="slide--artiste--item--body">
                                         <h4 class="slide--artiste--item--body--terms">{{ artiste.terms( {query:{taxonomy:'genres', orderby:'name', order: 'ASC'}} )|join(', ') }}</h4>
-                                        <a href="{{ artiste.link }}" class="btn slide--artiste--item--body--btn">Découvrir</a>
+                                        <a href="{{ artiste.link }}" class="btn slide--artiste--item--body--btn">
+                                            <hr class="btn--dash" />Découvrir
+                                        </a>
                                     </div>
                                 </div>
                             {% endfor %}
                         </div>
                     </div>
                     {{post.content}}
+                    .fdmdsmfds.kjmfsdkmfdskjmfkj
                 </div>
             </section>
         </article>

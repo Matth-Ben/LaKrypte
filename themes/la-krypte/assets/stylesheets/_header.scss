@@ -1,6 +1,6 @@
 .header {
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   left: 0;
   .wrapper {
     display: flex;
@@ -9,15 +9,14 @@
   }
   &--logo {
     align-items: center;
-    background-color: white;
+    background-color: $light;
     display: flex;
     height: 100%;
     justify-content: center;
     text-align: center;
     width: 225px;
     &--link {
-      color: #0D0D0D;
-      font-family: Roboto, sans-serif;
+      color: $dark;
       text-decoration: none;
       font-style: normal;
       font-weight: bold;
@@ -27,8 +26,8 @@
     }
   }
   &--nav {
-    background-color: #0D0D0D;
-    color: white;
+    background-color: $dark;
+    color: $light;
     height: 100%;
     &--list {
       display: flex;
@@ -37,8 +36,8 @@
       margin: 0;
       padding: 0;
       &--item {
-        border-left: 1px solid white;
-        border-right: 1px solid white;
+        border-left: 1px solid $light;
+        border-right: 1px solid $light;
         height: 100%;
         transition: .4s;
         &--link {
@@ -51,15 +50,14 @@
           width: max-content;
 
           // Font
-          color: white;
-          font-family: Roboto, sans-serif;
+          color: $light;
           font-style: normal;
           font-weight: normal;
           font-size: 16px;
           text-transform: uppercase;
           text-decoration: none;
           &:after {
-            border-bottom: 3px solid white;
+            border-bottom: 3px solid $light;
             content: "";
             display: block;
             margin: 0.25em auto 0;

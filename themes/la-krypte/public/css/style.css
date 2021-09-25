@@ -38,9 +38,30 @@ p {
   line-height: 16px;
 }
 
+.btn {
+  width: 153px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #f0f0f0;
+  background-color: #0D0D0D;
+  text-decoration: none;
+  padding: 15px 15px;
+  display: flex;
+}
+.btn--dash {
+  width: 15%;
+  height: 0px;
+  margin-left: 0;
+  transition: all 250ms ease-in-out;
+}
+.btn:hover .btn--dash {
+  transition: all 250ms ease-in-out;
+  width: 50%;
+}
+
 .header {
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   left: 0;
 }
 .header .wrapper {
@@ -50,7 +71,7 @@ p {
 }
 .header--logo {
   align-items: center;
-  background-color: white;
+  background-color: #f0f0f0;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -59,7 +80,6 @@ p {
 }
 .header--logo--link {
   color: #0D0D0D;
-  font-family: Roboto, sans-serif;
   text-decoration: none;
   font-style: normal;
   font-weight: bold;
@@ -69,7 +89,7 @@ p {
 }
 .header--nav {
   background-color: #0D0D0D;
-  color: white;
+  color: #f0f0f0;
   height: 100%;
 }
 .header--nav--list {
@@ -80,8 +100,8 @@ p {
   padding: 0;
 }
 .header--nav--list--item {
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+  border-left: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
   height: 100%;
   transition: 0.4s;
 }
@@ -93,8 +113,7 @@ p {
   justify-content: center;
   padding: 0 25px;
   width: max-content;
-  color: white;
-  font-family: Roboto, sans-serif;
+  color: #f0f0f0;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -102,7 +121,7 @@ p {
   text-decoration: none;
 }
 .header--nav--list--item--link:after {
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid #f0f0f0;
   content: "";
   display: block;
   margin: 0.25em auto 0;
@@ -116,7 +135,7 @@ p {
 
 #slide--artistes {
   --page: 0;
-  bottom: -25px;
+  bottom: 50px;
   overflow-x: clip;
   position: absolute;
   right: 0;
@@ -127,7 +146,7 @@ p {
   justify-content: end;
 }
 #slide--artistes .slide--artistes--button {
-  background: #0d96f2;
+  background: #F26E50;
   cursor: pointer;
   height: 50px;
   position: relative;
@@ -198,10 +217,9 @@ p {
   transform: translate3D(calc(var(--page) * -80vw), 0, 0);
 }
 #slide--artistes .slide--artiste--item {
-  background-color: #101419;
+  background-color: #0D0D0D;
   background-size: cover;
   background-position: center;
-  color: white;
   display: inline-block;
   font-size: 1.5vw;
   height: var(--slides-height);
@@ -238,24 +256,26 @@ p {
   bottom: 25px;
 }
 #slide--artistes .slide--artiste--item--body--terms {
+  bottom: 0;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
   position: relative;
-  bottom: 0;
-  cursor: default;
+}
+#slide--artistes .slide--artiste--item--body--terms:before {
+  content: "";
+  background-color: #f0f0f0;
+  display: block;
+  height: 2px;
+  margin-bottom: 15px;
+  width: 17px;
 }
 #slide--artistes .slide--artiste--item--body--btn {
-  display: inline-block;
-  background: #0d96f2;
-  padding: 0.5em 1.25em;
-  font-size: 1.33em;
-  opacity: 0;
-  position: absolute;
   bottom: -2em;
+  opacity: 0;
   pointer-events: none;
+  position: absolute;
   transition-delay: 25ms;
-  width: 111px;
 }
 #slide--artistes .slide--artiste--item:before {
   content: "";
@@ -269,7 +289,7 @@ p {
   bottom: 0;
 }
 #slide--artistes .slide--artiste--item:hover {
-  background-color: orangered;
+  background-color: #F26E50;
   transition: all 600ms ease-in-out;
 }
 #slide--artistes .slide--artiste--item:hover .slide--artiste--item--body--terms {
@@ -288,7 +308,15 @@ p {
   width: 100%;
 }
 #template-homepage .page--body--thumbnail {
-  width: 100%;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: -1;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {

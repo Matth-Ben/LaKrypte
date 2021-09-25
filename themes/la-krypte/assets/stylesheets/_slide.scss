@@ -1,6 +1,6 @@
 #slide--artistes {
   --page: 0;
-  bottom: -25px;
+  bottom: 50px;
   overflow-x: clip;
   position: absolute;
   right: 0;
@@ -10,7 +10,7 @@
     justify-content: end;
   }
   .slide--artistes--button {
-    background: #0d96f2;
+    background: $orange;
     cursor: pointer;
     height: 50px;
     position: relative;
@@ -84,10 +84,9 @@
     -webkit-transform: translate3D(calc(var(--page) * -80vw), 0, 0);
     transform: translate3D(calc(var(--page) * -80vw), 0, 0);
     &--item {
-      background-color: #101419;
+      background-color: $dark;
       background-size: cover;
       background-position: center;
-      color: white;
       display: inline-block;
       font-size: 1.5vw;
       height: var(--slides-height);
@@ -124,25 +123,26 @@
         position: absolute;
         bottom: 25px;
         &--terms {
+          bottom: 0;
           font-weight: normal;
           font-size: 14px;
           line-height: 16px;
-
           position: relative;
-          bottom: 0;
-          cursor: default;
+          &:before {
+            content: '';
+            background-color: $light;
+            display: block;
+            height: 2px;
+            margin-bottom: 15px;
+            width: 17px;
+          }
         }
         &--btn {
-          display: inline-block;
-          background: #0d96f2;
-          padding: 0.5em 1.25em;
-          font-size: 1.33em;
-          opacity: 0;
-          position: absolute;
           bottom: -2em;
+          opacity: 0;
           pointer-events: none;
+          position: absolute;
           transition-delay: 25ms;
-          width: 111px;
         }
       }
       &:before {
@@ -157,7 +157,7 @@
         bottom: 0;
       }
       &:hover {
-        background-color: orangered;
+        background-color: $orange;
         transition: all 600ms ease-in-out;
         .slide--artiste--item--body--terms {
           transition-delay: 100ms;

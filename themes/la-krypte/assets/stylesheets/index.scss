@@ -1,8 +1,13 @@
 @import "colors";
 @import "fonts";
+@import "button";
 @import "header";
 @import "slide";
 @import "template-homepage";
+
+html {
+  overflow-x: hidden;
+}
 
 body {
   margin: auto;
