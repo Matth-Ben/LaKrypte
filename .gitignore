@@ -1,5 +1,8 @@
 languages/
-plugins/
+plugins/index.php
+plugins/timber-library
+plugins/guten-block-krypte/node_modules
+plugins/guten-block-krypte/build
 upgrade/
 uploads/
 themes/index.php
