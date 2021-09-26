@@ -1,0 +1,16 @@
+{
+	"apiVersion": 2,
+	"name": "create-block/guten-block-krypte",
+	"version": "0.1.0",
+	"title": "Guten Block Krypte",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "guten-block-krypte",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
