@@ -307,6 +307,9 @@ p {
   position: initial;
   width: 100%;
 }
+#template-homepage .page--body--header {
+  height: 100vh;
+}
 #template-homepage .page--body--thumbnail {
   top: 32%;
   left: 50%;

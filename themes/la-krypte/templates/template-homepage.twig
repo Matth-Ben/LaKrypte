@@ -5,30 +5,33 @@
         <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
             <section class="page--content">
                 <div class="page--body">
-                    <img class="page--body--thumbnail" src="{{ post.thumbnail.src }}" />
-                    <div id="slide--artistes">
-                        <div class="slide--artistes--buttons">
-                            <div class="slide--artistes--button" id="next"></div>
-                            <div class="slide--artistes--button" id="prev"></div>
-                        </div>
-                        <div id="slide--artiste" class="slide--artiste">
-                            {% for artiste in artistes %}
-                                <div class="slide--artiste--item">
-                                    <img class="slide--artiste--item--background" src="{{ artiste.thumbnail.src }}" />
-                                    <h2 class="slide--artiste--item--name">{{ artiste.title }}</h2>
-                                    <h5 class="slide--artiste--item--text">Petit text en plus</h5>
-                                    <div class="slide--artiste--item--body">
-                                        <h4 class="slide--artiste--item--body--terms">{{ artiste.terms( {query:{taxonomy:'genres', orderby:'name', order: 'ASC'}} )|join(', ') }}</h4>
-                                        <a href="{{ artiste.link }}" class="btn slide--artiste--item--body--btn">
-                                            <hr class="btn--dash" />Découvrir
-                                        </a>
+                    <div class="page--body--header">
+                        <img class="page--body--thumbnail" src="{{ post.thumbnail.src }}" />
+                        <div id="slide--artistes">
+                            <div class="slide--artistes--buttons">
+                                <div class="slide--artistes--button" id="next"></div>
+                                <div class="slide--artistes--button" id="prev"></div>
+                            </div>
+                            <div id="slide--artiste" class="slide--artiste">
+                                {% for artiste in artistes %}
+                                    <div class="slide--artiste--item">
+                                        <img class="slide--artiste--item--background" src="{{ artiste.thumbnail.src }}" />
+                                        <h2 class="slide--artiste--item--name">{{ artiste.title }}</h2>
+                                        <h5 class="slide--artiste--item--text">Petit text en plus</h5>
+                                        <div class="slide--artiste--item--body">
+                                            <h4 class="slide--artiste--item--body--terms">{{ artiste.terms( {query:{taxonomy:'genres', orderby:'name', order: 'ASC'}} )|join(', ') }}</h4>
+                                            <a href="{{ artiste.link }}" class="btn slide--artiste--item--body--btn">
+                                                <hr class="btn--dash" />Découvrir
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            {% endfor %}
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
-                    {{post.content}}
-                    .fdmdsmfds.kjmfsdkmfdskjmfkj
+                    <div class="page--body--content">
+                        {{post.content}}
+                    </div>
                 </div>
             </section>
         </article>
