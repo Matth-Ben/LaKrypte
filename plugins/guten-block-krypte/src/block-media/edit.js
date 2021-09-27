@@ -61,6 +61,7 @@ export default function Edit( props ) {
 				</PanelBody>
 			</InspectorControls>
 
+			<div>
 			{props.attributes.hasTitle && (
 				<RichText
 					tagName="h2"
@@ -97,6 +98,8 @@ export default function Edit( props ) {
 					</a>
 				</p>
 			) }
+			</div>
+			<div>
 			{ ! props.attributes.pictureID ? (
 				<MediaUploadCheck>
 					<MediaUpload
@@ -143,6 +146,7 @@ export default function Edit( props ) {
 					) }
 				</p>
 			) }
+			</div>
 		</div>
 
 	)
