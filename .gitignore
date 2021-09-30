@@ -1,5 +1,6 @@
 languages/
 plugins/index.php
+plugins/contact-form-7
 plugins/timber-library
 plugins/guten-block-krypte/node_modules
 plugins/guten-block-krypte/build
