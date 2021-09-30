@@ -1,3 +1,108 @@
 #footer {
-
+  .footer {
+    &--on {
+      display: flex;
+      height: 380px;
+      .on--footer {
+        width: calc(100% / 4);
+        .wp-block-image {
+          margin: 0;
+          height: 100%;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    &--body {
+      position: relative;
+      display: flex;
+      &--left,
+      &--right {
+        height: 270px;
+        width: 100%;
+        display: flex;
+        align-items: end;
+      }
+      &--left {
+        background-color: $orange;
+        max-width: 350px;
+        justify-content: end;
+        &--title {
+          margin-right: 25px;
+        }
+      }
+      &--center {
+        align-items: center;
+        background-color: $dark;
+        display: flex;
+        height: 300px;
+        margin: auto;
+        position: absolute;
+        width: 900px;
+        left: 0;
+        right: 0;
+        top: -130px;
+        .footer--widget {
+          text-align: center;
+          width: 25%;
+          &:last-child {
+            width: 50%;
+          }
+          .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            &-item {
+              margin-bottom: 10px;
+              a {
+                color: $light;
+                display: inline-block;
+                font-weight: bold;
+                text-decoration: none;
+                &:after {
+                  border-bottom: 3px solid $light;
+                  content: "";
+                  display: block;
+                  margin: 0.25em auto 0;
+                  transition: width 250ms ease-in-out 0s;
+                  width: 0;
+                }
+                &:hover:after {
+                  transition: width 100ms ease-in-out 0s;
+                  width: 75%;
+                }
+              }
+            }
+          }
+        }
+      }
+      &--right {
+        &--content {
+          color: $dark;
+          margin: 25px;
+          width: 100%;
+          display: block;
+          text-align: center;
+          &--copyright {
+            display: inline-block;
+          }
+          &--dev {
+            display: inline-block;
+            float: right;
+            .link {
+              color: $dark;
+              display: inline-block;
+              &:after {
+                border-bottom-color: $dark;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -20,3 +20,21 @@
     }
   }
 }
+
+.link {
+  color: $dark;
+  font-weight: bold;
+  text-decoration: none;
+  &:after {
+    border-bottom: 3px solid $light;
+    content: "";
+    display: block;
+    margin: 0.25em auto 0;
+    transition: width 250ms ease-in-out 0s;
+    width: 0;
+  }
+  &:hover:after {
+    transition: width 100ms ease-in-out 0s;
+    width: 75%;
+  }
+}

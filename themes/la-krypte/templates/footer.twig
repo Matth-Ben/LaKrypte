@@ -1,11 +1,25 @@
-Copyright {{"now"|date('Y')}}
-<div class="">
-    <div class="">
+<div class="footer">
+    <div class="footer--on">
         {{ on__footer }}
     </div>
-    <div class="">
-        {{ footer__1 }}
-        {{ footer__2 }}
-        {{ footer__3 }}
+    <div class="footer--body">
+        <div class="footer--body--left">
+            <h2 class="footer--body--left--title">{{ site.name }}</h2>
+        </div>
+        <div class="footer--body--center">
+            {{ footer__1 }}
+            {{ footer__2 }}
+            {{ footer__3 }}
+        </div>
+        <div class="footer--body--right">
+            <div class="footer--body--right--content">
+                <div class="footer--body--right--content--copyright">
+                    Copyright {{"now"|date('Y')}} | La Krypte
+                </div>
+                <div class="footer--body--right--content--dev">
+                    Site crée par <a class="link" href="http://www.matthiasbenoit.fr" target="_blank">Matthias Benoit</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
