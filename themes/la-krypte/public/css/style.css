@@ -193,7 +193,7 @@ p {
   height: 300px;
   margin: auto;
   position: absolute;
-  width: 900px;
+  width: 70%;
   left: 0;
   right: 0;
   top: -130px;
@@ -426,22 +426,22 @@ p {
 
 .contact--form--title {
   color: #F26E50;
-  float: left;
   font-size: 34px;
   line-height: 40px;
   margin: 0;
+  text-align: left;
   text-transform: uppercase;
 }
 .contact--form--body input {
   border: none;
   height: 30px;
   margin-bottom: 15px;
-  width: 345px;
+  width: 73%;
 }
 .contact--form--body textarea {
   border: none;
   height: 60px;
-  width: 345px;
+  width: 73%;
 }
 .contact--form--body .btn {
   align-items: center;
@@ -450,7 +450,7 @@ p {
   background-color: #F26E50;
   height: 44px;
   margin-left: auto;
-  margin-right: 50px;
+  margin-right: 13%;
   width: 95px;
 }
 .contact--form--body .ajax-loader {
@@ -502,10 +502,9 @@ p {
   height: 100vh;
 }
 #template-homepage .page--body--thumbnail {
-  top: 32%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
+  max-height: 770px;
+  object-fit: cover;
+  width: 100%;
   z-index: -1;
 }
 

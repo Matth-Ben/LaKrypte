@@ -8,10 +8,9 @@
         height: 100vh;
       }
       &--thumbnail {
-        top: 32%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute;
+        max-height: 770px;
+        object-fit: cover;
+        width: 100%;
         z-index: -1;
       }
     }
