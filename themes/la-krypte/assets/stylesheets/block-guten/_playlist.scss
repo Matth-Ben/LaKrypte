@@ -1,0 +1,37 @@
+.wp-playlist.wp-audio-playlist {
+  height: 870px;
+  background-color: $grey-2;
+  width: calc(100% - 150px);
+  margin-left: auto;
+  align-items: center;
+  .wp-playlist-current-item {
+    overflow: inherit;
+    img {
+      position: absolute;
+      max-width: initial;
+    }
+  }
+  .wp-playlist-item-album {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 50px;
+    text-transform: uppercase;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 70px;
+      height: 200px;
+      background-color: $orange;
+    }
+  }
+  .mejs-container.mejs-container-keyboard-inactive.mejs-audio {
+    display: inline-block;
+    width: auto;
+  }
+  .wp-playlist-tracks {
+    display: inline-block;
+  }
+}

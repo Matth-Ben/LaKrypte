@@ -458,6 +458,71 @@ p {
   bottom: 35px;
 }
 
+.lakrypte--block--rs {
+  padding: 45px 15px 35px;
+}
+.lakrypte--block--rs--content {
+  text-align: center;
+}
+.lakrypte--block--rs--content .title {
+  margin: auto;
+}
+.lakrypte--block--rs--content--list {
+  margin-top: 20px;
+}
+.lakrypte--block--rs--content--list--item {
+  margin: auto 7px;
+}
+.lakrypte--block--rs--content--list--item .dashicons {
+  color: #f0f0f0;
+  font-size: 30px;
+  height: auto;
+  text-decoration: none;
+  width: auto;
+}
+.lakrypte--block--rs--content--list--item .dashicons:after {
+  border-bottom: 3px solid #f0f0f0;
+  content: "";
+  display: block;
+  margin: 0.25em auto 0;
+  transition: width 250ms ease-in-out 0s;
+  width: 0;
+}
+.lakrypte--block--rs--content--list--item .dashicons:hover:after {
+  transition: width 100ms ease-in-out 0s;
+  width: 75%;
+}
+.lakrypte--block--rs--content--list--item .dashicons-facebook-alt:hover {
+  color: #3b5998;
+}
+.lakrypte--block--rs--content--list--item .dashicons-facebook-alt:after {
+  border-bottom-color: #3b5998;
+}
+.lakrypte--block--rs--content--list--item .dashicons-instagram:hover {
+  color: #bc1888;
+}
+.lakrypte--block--rs--content--list--item .dashicons-instagram:after {
+  border-bottom-color: #bc1888;
+}
+.lakrypte--block--rs--content--list--item .dashicons-youtube:hover {
+  color: #c4302b;
+}
+.lakrypte--block--rs--content--list--item .dashicons-youtube:after {
+  border-bottom-color: #c4302b;
+}
+.lakrypte--block--rs--content--list--item .dashicons-spotify:hover {
+  color: #81b71a;
+}
+.lakrypte--block--rs--content--list--item .dashicons-spotify:after {
+  border-bottom-color: #81b71a;
+}
+.lakrypte--block--rs--content--list--item .dashicons-soundcloud:hover {
+  color: #ff7700;
+}
+.lakrypte--block--rs--content--list--item .dashicons-soundcloud:after {
+  border-bottom-color: #ff7700;
+}
+
 .lakrypte--block--text--media {
   min-height: 620px;
   display: flex;
@@ -492,6 +557,44 @@ p {
 }
 .lakrypte--block--text--media--content .btn {
   margin-top: 40px;
+}
+
+.wp-playlist.wp-audio-playlist {
+  height: 870px;
+  background-color: #403F3F;
+  width: calc(100% - 150px);
+  margin-left: auto;
+  align-items: center;
+}
+.wp-playlist.wp-audio-playlist .wp-playlist-current-item {
+  overflow: inherit;
+}
+.wp-playlist.wp-audio-playlist .wp-playlist-current-item img {
+  position: absolute;
+  max-width: initial;
+}
+.wp-playlist.wp-audio-playlist .wp-playlist-item-album {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 43px;
+  line-height: 50px;
+  text-transform: uppercase;
+  position: relative;
+}
+.wp-playlist.wp-audio-playlist .wp-playlist-item-album:before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 200px;
+  background-color: #F26E50;
+}
+.wp-playlist.wp-audio-playlist .mejs-container.mejs-container-keyboard-inactive.mejs-audio {
+  display: inline-block;
+  width: auto;
+}
+.wp-playlist.wp-audio-playlist .wp-playlist-tracks {
+  display: inline-block;
 }
 
 #template-homepage .page--body {
