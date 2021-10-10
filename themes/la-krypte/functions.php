@@ -181,9 +181,11 @@ function custom_underscore_playlist_templates() {
             </div>
 
             <# if ( data.thumb && data.thumb.src ) { #>
-            <img src="{{ data.thumb.src }}" alt="{{ data.thumb.alt }}" />
+            {{ console.log(data.thumb) }}
+            <img src="{{ data.thumb.src }}" alt="{{ data.thumb.alt }}" width="600" />
             <# } #>
         </script>
+
         <script type="text/html" id="tmpl-wp-playlist-item">
             <div class="wp-playlist-item">
                 <a class="wp-playlist-caption" href="{{ data.src }}">
