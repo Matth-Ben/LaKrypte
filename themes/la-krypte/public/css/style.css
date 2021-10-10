@@ -698,34 +698,49 @@ p {
   position: relative;
   transition: width 250ms ease-in-out 0s;
 }
+.wp-playlist.wp-audio-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption .wp-playlist-item-title {
+  font-size: 18px;
+  line-height: 26px;
+}
 
 .artiste--header {
   height: 80vh;
   position: relative;
+  max-width: 1440px;
+  margin: auto;
+}
+.artiste--header:before {
+  content: "";
+  width: 300px;
+  height: 132px;
+  background-color: #F26E50;
+  position: absolute;
+  top: 25%;
+  left: 0;
+}
+.artiste--header:after {
+  content: "";
+  width: 201px;
+  height: 464px;
+  background-color: #F26E50;
+  position: absolute;
+  right: 30%;
+  bottom: 0;
 }
 .artiste--header--name {
   position: absolute;
   left: 25%;
   top: 0;
   bottom: 0;
-  margin: auto;
   color: #0D0D0D;
-  width: fit-content;
-  height: fit-content;
-  text-transform: uppercase;
-  font-weight: bold;
   font-size: 52px;
+  font-weight: bold;
+  height: fit-content;
   line-height: 61px;
-}
-.artiste--header--name:before {
-  content: "";
-  width: 300px;
-  height: 132px;
-  background-color: #F26E50;
-  position: absolute;
-  top: 0;
-  left: 0;
   margin: auto;
+  text-transform: uppercase;
+  width: fit-content;
+  z-index: 2;
 }
 .artiste--header--thumbnail {
   position: absolute;
@@ -733,17 +748,7 @@ p {
   top: 0;
   bottom: 0;
   margin: auto;
-}
-.artiste--header--thumbnail:before {
-  content: "";
-  width: 201px;
-  height: 464px;
-  background-color: #F26E50;
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto;
+  z-index: 1;
 }
 
 #template-homepage .page--body {

@@ -2,29 +2,40 @@
   &--header {
     height: 80vh;
     position: relative;
+    max-width: 1440px;
+    margin: auto;
+    &:before {
+      content: '';
+      width: 300px;
+      height: 132px;
+      background-color: $orange;
+      position: absolute;
+      top: 25%;
+      left: 0;
+    }
+    &:after {
+      content: '';
+      width: 201px;
+      height: 464px;
+      background-color: $orange;
+      position: absolute;
+      right: 30%;
+      bottom: 0;
+    }
     &--name {
       position: absolute;
       left: 25%;
       top: 0;
       bottom: 0;
-      margin: auto;
       color: $dark;
-      width: fit-content;
-      height: fit-content;
-      text-transform: uppercase;
-      font-weight: bold;
       font-size: 52px;
+      font-weight: bold;
+      height: fit-content;
       line-height: 61px;
-      &:before {
-        content: '';
-        width: 300px;
-        height: 132px;
-        background-color: $orange;
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: auto;
-      }
+      margin: auto;
+      text-transform: uppercase;
+      width: fit-content;
+      z-index: 2;
     }
     &--thumbnail {
       position: absolute;
@@ -32,17 +43,7 @@
       top: 0;
       bottom: 0;
       margin: auto;
-      &:before {
-        content: '';
-        width: 201px;
-        height: 464px;
-        background-color: $orange;
-        position: absolute;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        margin: auto;
-      }
+      z-index: 1;
     }
   }
 }
