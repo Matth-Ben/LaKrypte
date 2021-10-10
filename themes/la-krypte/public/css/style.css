@@ -699,6 +699,53 @@ p {
   transition: width 250ms ease-in-out 0s;
 }
 
+.artiste--header {
+  height: 80vh;
+  position: relative;
+}
+.artiste--header--name {
+  position: absolute;
+  left: 25%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  color: #0D0D0D;
+  width: fit-content;
+  height: fit-content;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 61px;
+}
+.artiste--header--name:before {
+  content: "";
+  width: 300px;
+  height: 132px;
+  background-color: #F26E50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+}
+.artiste--header--thumbnail {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.artiste--header--thumbnail:before {
+  content: "";
+  width: 201px;
+  height: 464px;
+  background-color: #F26E50;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 #template-homepage .page--body {
   position: initial;
   width: 100%;

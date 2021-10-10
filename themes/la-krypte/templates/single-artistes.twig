@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			<section class="artiste">
+				<div class="artiste--header">
+					<h1 class="artiste--header--name">{{ post.title }}</h1>
+					<img class="artiste--header--thumbnail" src="{{ post.thumbnail.src|resize(478, 556) }}">
+				</div>
+				<div class="artiste--body">
+					{{post.content}}
+				</div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}
