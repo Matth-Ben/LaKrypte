@@ -3,19 +3,21 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 0 0 auto;
-  padding: 75px 0;
+  padding-top: 5vw;
   position: relative;
-  width: calc(100% - 250px);
+  width: calc(100% - 20vw);
   .wp-playlist-current-item {
     overflow: inherit;
     width: 100%;
     img {
+      height: 28vw;
       margin: auto;
       max-width: initial;
       position: absolute;
-      bottom: 0;
-      left: -75px;
+      bottom: -4vw;
+      left: -5vw;
       top: 0;
+      width: auto;
       z-index: 8;
     }
   }
@@ -24,9 +26,9 @@
     &:before {
       content: '';
       background-color: $orange;
-      height: 200px;
+      height: 10vw;
       position: absolute;
-      width: 70px;
+      width: 5vw;
       z-index: 9;
     }
   }
@@ -34,10 +36,10 @@
     color: $light;
     font-style: normal;
     font-weight: bold;
-    font-size: 43px;
-    line-height: 50px;
-    margin: 15px auto auto 35px;
-    max-width: 675px;
+    font-size: 3vw;
+    line-height: 3vw;
+    margin: 0.5vw auto auto 3vw;
+    max-width: 35vw;
     position: relative;
     text-transform: uppercase;
     white-space: break-spaces;
@@ -48,17 +50,17 @@
     background: #F26E50;
     border-radius: 50%;
     display: flex;
-    height: 286px !important;
+    height: 20vw !important;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 10vw;
     margin-right: 0;
-    margin-bottom: 100px;
-    margin-left: 375px;
-    width: 286px !important;
+    margin-bottom: 10vw;
+    margin-left: 26vw;
+    width: 20vw !important;
     z-index: 10;
     .mejs-inner {
-      width: 276px;
-      height: 277px;
+      width: 19vw;
+      height: 19vw;
       background: radial-gradient(133.73% 133.73% at 50% 50%, #0D0D0D 0%, rgba(13, 13, 13, 0) 100%);
       border: 2px solid rgba(13, 13, 13, 0.5);
       border-radius: 50%;
@@ -78,17 +80,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 66px;
-        width: 66px;
+        height: 5vw;
+        width: 5vw;
         &:after {
           content: '';
-          width: 200px;
+          width: 13vw;
           height: 0;
           border-bottom: 2px solid $light;
           display: inline-block;
           margin-bottom: 4px;
           position: absolute;
-          right: -100px;
+          right: -7vw;
         }
       }
       .mejs-time,
@@ -100,8 +102,7 @@
     }
   }
   .wp-playlist-tracks {
-    margin: auto auto auto 110px;
-    min-width: 150px;
+    margin: auto auto auto 8vw;
     .wp-playlist-item {
       border-bottom: none;
       &.wp-playlist-playing {
@@ -109,20 +110,15 @@
         .wp-playlist-caption {
           color: $light !important;
           &:before {
-            width: 20px;
+            width: 2vw;
             transition: width 100ms ease-in-out 0s;
           }
         }
       }
       .wp-playlist-caption {
         align-items: center;
-        color: #595859;
         display: flex;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 19px;
-        overflow: initial;
-        text-transform: uppercase;
+        color: #595859;
         &:before {
           content: '';
           width: 0;
@@ -134,8 +130,11 @@
           transition: width 250ms ease-in-out 0s;
         }
         .wp-playlist-item-title {
-          font-size: 18px;
-          line-height: 26px;
+          font-weight: bold;
+          font-size: 1.4vw;
+          line-height: 2vw;
+          overflow: initial;
+          text-transform: uppercase;
         }
       }
     }

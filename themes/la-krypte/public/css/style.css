@@ -5,14 +5,14 @@ html {
 
 h1 {
   font-weight: bold;
-  font-size: 43px;
-  line-height: 50px;
+  font-size: 5vw;
+  line-height: 5vw;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 2.5vw;
+  line-height: 2.5vw;
 }
 
 h3 {
@@ -34,18 +34,18 @@ h5 {
 }
 
 p {
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.1vw;
+  line-height: 1.3vw;
 }
 
 .btn {
-  width: 153px;
-  font-size: 16px;
-  line-height: 19px;
+  width: 11vw;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
   color: #f0f0f0;
   background-color: #0D0D0D;
   text-decoration: none;
-  padding: 15px 15px;
+  padding: 1vw;
   display: flex;
 }
 .btn--dash {
@@ -630,6 +630,22 @@ p {
   width: 100%;
 }
 
+.b6 {
+  min-height: 175px !important;
+}
+
+.b5 {
+  min-width: 175px !important;
+}
+
+.ax {
+  height: 175px !important;
+}
+
+.aw {
+  width: 175px !important;
+}
+
 .lakrypte--block--rs {
   padding: 45px 15px 35px;
 }
@@ -696,11 +712,11 @@ p {
 }
 
 .lakrypte--block--text--media {
-  min-height: 620px;
+  min-height: 45vw;
   display: flex;
   align-items: center;
   position: relative;
-  padding: 0 150px;
+  padding: 0 20vw;
 }
 .lakrypte--block--text--media--background {
   position: absolute;
@@ -711,7 +727,7 @@ p {
   object-fit: cover;
 }
 .lakrypte--block--text--media--content {
-  max-width: 360px;
+  max-width: 25vw;
 }
 .lakrypte--block--text--media--content .title {
   text-transform: uppercase;
@@ -720,15 +736,15 @@ p {
   content: "";
   background: #F26E50;
   display: block;
-  height: 230px;
+  height: 15vw;
   position: absolute;
-  width: 110px;
+  width: 8vw;
   z-index: -1;
-  left: 120px;
-  top: 40px;
+  left: 15vw;
+  top: 3vw;
 }
 .lakrypte--block--text--media--content .btn {
-  margin-top: 40px;
+  margin-top: 3vw;
 }
 
 .wp-playlist.wp-audio-playlist {
@@ -736,21 +752,23 @@ p {
   display: flex;
   flex-wrap: wrap;
   margin: 0 0 0 auto;
-  padding: 75px 0;
+  padding-top: 5vw;
   position: relative;
-  width: calc(100% - 250px);
+  width: calc(100% - 20vw);
 }
 .wp-playlist.wp-audio-playlist .wp-playlist-current-item {
   overflow: inherit;
   width: 100%;
 }
 .wp-playlist.wp-audio-playlist .wp-playlist-current-item img {
+  height: 28vw;
   margin: auto;
   max-width: initial;
   position: absolute;
-  bottom: 0;
-  left: -75px;
+  bottom: -4vw;
+  left: -5vw;
   top: 0;
+  width: auto;
   z-index: 8;
 }
 .wp-playlist.wp-audio-playlist .wp-playlist-caption {
@@ -759,19 +777,19 @@ p {
 .wp-playlist.wp-audio-playlist .wp-playlist-caption:before {
   content: "";
   background-color: #F26E50;
-  height: 200px;
+  height: 10vw;
   position: absolute;
-  width: 70px;
+  width: 5vw;
   z-index: 9;
 }
 .wp-playlist.wp-audio-playlist .wp-playlist-item-album {
   color: #f0f0f0;
   font-style: normal;
   font-weight: bold;
-  font-size: 43px;
-  line-height: 50px;
-  margin: 15px auto auto 35px;
-  max-width: 675px;
+  font-size: 3vw;
+  line-height: 3vw;
+  margin: 0.5vw auto auto 3vw;
+  max-width: 35vw;
   position: relative;
   text-transform: uppercase;
   white-space: break-spaces;
@@ -782,18 +800,18 @@ p {
   background: #F26E50;
   border-radius: 50%;
   display: flex;
-  height: 286px !important;
+  height: 20vw !important;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 10vw;
   margin-right: 0;
-  margin-bottom: 100px;
-  margin-left: 375px;
-  width: 286px !important;
+  margin-bottom: 10vw;
+  margin-left: 26vw;
+  width: 20vw !important;
   z-index: 10;
 }
 .wp-playlist.wp-audio-playlist .mejs-container .mejs-inner {
-  width: 276px;
-  height: 277px;
+  width: 19vw;
+  height: 19vw;
   background: radial-gradient(133.73% 133.73% at 50% 50%, #0D0D0D 0%, rgba(13, 13, 13, 0) 100%);
   border: 2px solid rgba(13, 13, 13, 0.5);
   border-radius: 50%;
@@ -814,18 +832,18 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 66px;
-  width: 66px;
+  height: 5vw;
+  width: 5vw;
 }
 .wp-playlist.wp-audio-playlist .mejs-container .mejs-controls .mejs-playpause-button:after {
   content: "";
-  width: 200px;
+  width: 13vw;
   height: 0;
   border-bottom: 2px solid #f0f0f0;
   display: inline-block;
   margin-bottom: 4px;
   position: absolute;
-  right: -100px;
+  right: -7vw;
 }
 .wp-playlist.wp-audio-playlist .mejs-container .mejs-controls .mejs-time,
 .wp-playlist.wp-audio-playlist .mejs-container .mejs-controls .mejs-time-rail,
@@ -834,8 +852,7 @@ p {
   display: none;
 }
 .wp-playlist.wp-audio-playlist .wp-playlist-tracks {
-  margin: auto auto auto 110px;
-  min-width: 150px;
+  margin: auto auto auto 8vw;
 }
 .wp-playlist.wp-audio-playlist .wp-playlist-tracks .wp-playlist-item {
   border-bottom: none;
@@ -847,18 +864,13 @@ p {
   color: #f0f0f0 !important;
 }
 .wp-playlist.wp-audio-playlist .wp-playlist-tracks .wp-playlist-item.wp-playlist-playing .wp-playlist-caption:before {
-  width: 20px;
+  width: 2vw;
   transition: width 100ms ease-in-out 0s;
 }
 .wp-playlist.wp-audio-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption {
   align-items: center;
-  color: #595859;
   display: flex;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 19px;
-  overflow: initial;
-  text-transform: uppercase;
+  color: #595859;
 }
 .wp-playlist.wp-audio-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption:before {
   content: "";
@@ -871,42 +883,43 @@ p {
   transition: width 250ms ease-in-out 0s;
 }
 .wp-playlist.wp-audio-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption .wp-playlist-item-title {
-  font-size: 18px;
-  line-height: 26px;
+  font-weight: bold;
+  font-size: 1.4vw;
+  line-height: 2vw;
+  overflow: initial;
+  text-transform: uppercase;
 }
 
 .artiste--header {
-  height: 80vh;
+  height: 45vw;
   position: relative;
   max-width: 1440px;
   margin: auto;
 }
 .artiste--header:before {
   content: "";
-  width: 300px;
-  height: 132px;
+  width: 20vw;
+  height: 8vw;
   background-color: #F26E50;
   position: absolute;
-  top: 25%;
+  top: 12vw;
   left: 0;
 }
 .artiste--header:after {
   content: "";
-  width: 201px;
-  height: 464px;
+  width: 10vw;
+  height: 20vw;
   background-color: #F26E50;
   position: absolute;
-  right: 30%;
+  right: 28vw;
   bottom: 0;
 }
 .artiste--header--name {
   position: absolute;
-  left: 25%;
+  left: 12vw;
   top: 0;
   bottom: 0;
   color: #0D0D0D;
-  font-size: 52px;
-  font-weight: bold;
   height: fit-content;
   line-height: 61px;
   margin: auto;
@@ -920,6 +933,7 @@ p {
   top: 0;
   bottom: 0;
   margin: auto;
+  width: 35vw;
   z-index: 1;
 }
 
