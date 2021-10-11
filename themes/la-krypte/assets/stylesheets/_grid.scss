@@ -4,7 +4,6 @@ $prefix: col;
 
 .row {
   display: flex;
-  gap: $gutter;
 }
 
 .grid {
@@ -16,15 +15,15 @@ $prefix: col;
 
 @for $i from 1 through $cols {
   .grid#{$i} {
-	grid-template-columns: repeat( $i, 1fr);
+    grid-template-columns: repeat( $i, 1fr);
   }
 }
 
 @for $i from 1 through $cols {
   .#{$prefix}#{$i} {
-	$w: 100% / $cols * $i;
-	flex-basis: $w;
-	box-sizing: border-box;
+    $w: 100% / $cols * $i;
+    flex-basis: $w;
+    box-sizing: border-box;
   }
 }
 
@@ -38,16 +37,16 @@ $prefix: col;
 
 @media screen and (max-width: 768px){
   .row {
-	&.column-sm {
-	  flex-direction: column;
-	}
+    &.column-sm {
+      flex-direction: column;
+    }
   }
 
   .order-sm-0 {
-	order: 0;
+    order: 0;
   }
 
   .order-sm-1 {
-	order: 1;
+    order: 1;
   }
 }

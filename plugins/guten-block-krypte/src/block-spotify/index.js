@@ -18,7 +18,7 @@ registerBlockType( 'guten-block-krypte/block-spotify', {
 		url: {
 			type: 'string',
 			source: 'attribute',
-			selector: '.spotify',
+			selector: '.lakrypte--block--spotify--content--spotify',
 			attribute: 'src',
 		},
 		pictureID: { // L'identifiant de l'image
@@ -57,6 +57,22 @@ registerBlockType( 'guten-block-krypte/block-spotify', {
 			source: 'attribute',
 			attribute: 'alt',
 			selector: '.picture-2',
+		},
+		pictureID3: { // L'identifiant de l'image
+			type: 'number',
+			default: null,
+		},
+		pictureURL3: { // L'URL de l'image
+			type: 'string',
+			source: 'attribute',
+			attribute: 'src',
+			selector: '.picture-3',
+		},
+		pictureAlt3: { // Le texte alternatif de l'image
+			type: 'string',
+			source: 'attribute',
+			attribute: 'alt',
+			selector: '.picture-3',
 		},
 	},
 	edit: Edit,
