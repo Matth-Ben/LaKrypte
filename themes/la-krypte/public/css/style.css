@@ -1,36 +1,41 @@
 html {
   color: #f0f0f0;
-  font-family: Roboto, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 h1 {
   font-weight: bold;
   font-size: 5vw;
   line-height: 5vw;
+  font-family: "Oswald", sans-serif;
 }
 
 h2 {
   font-weight: bold;
   font-size: 2.5vw;
   line-height: 2.5vw;
+  font-family: "Oswald", sans-serif;
 }
 
 h3 {
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
+  font-family: "Oswald", sans-serif;
 }
 
 h4 {
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
+  font-family: "Oswald", sans-serif;
 }
 
 h5 {
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
+  font-family: "Oswald", sans-serif;
 }
 
 p {
