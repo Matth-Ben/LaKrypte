@@ -761,6 +761,18 @@ p {
   position: relative;
   width: calc(100% - 20vw);
 }
+.wp-playlist.wp-audio-playlist:after {
+  content: "";
+  background-image: url("../svg/vinyl.svg");
+  width: 40vw;
+  height: 40vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 17vw;
+  right: 0;
+  bottom: 1%;
+}
 .wp-playlist.wp-audio-playlist .wp-playlist-current-item {
   overflow: inherit;
   width: 100%;
@@ -858,6 +870,7 @@ p {
 }
 .wp-playlist.wp-audio-playlist .wp-playlist-tracks {
   margin: auto auto auto 8vw;
+  z-index: 1;
 }
 .wp-playlist.wp-audio-playlist .wp-playlist-tracks .wp-playlist-item {
   border-bottom: none;
