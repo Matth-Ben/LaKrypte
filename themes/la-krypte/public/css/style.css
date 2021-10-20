@@ -1058,13 +1058,13 @@ p {
 #projects .project--item--img--thumbnail--supp {
   position: absolute;
   max-width: 40%;
-  bottom: -7vw;
-  left: 1vw;
+  bottom: -25%;
+  left: 2%;
 }
 #projects .project--item--img--thumbnail--supp:first-child {
   max-width: 30%;
-  bottom: -3vw;
-  right: 4vw;
+  bottom: -10%;
+  right: 6%;
   left: auto;
   z-index: 2;
 }
