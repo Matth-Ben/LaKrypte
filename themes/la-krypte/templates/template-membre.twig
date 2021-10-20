@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div id="template-membres" class="content-wrapper">
+        <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+            <section class="page--content">
+                <div class="page--body">
+                    <div class="page--body--header">
+                        <img class="page--body--thumbnail" src="{{ post.thumbnail.src }}" />
+{#                        <div id="membres">#}
+{#                            <div id="membre" class="membre">#}
+{#                                {% for membre in membres %}#}
+{#                                    <div class="membre--item">#}
+{#                                        <div class="row">#}
+{#                                            <div class="col7 membre--item--img {% if loop.index is divisible by(2) %}order-1{% endif %}">#}
+{#                                                <img class="membre--item--img--thumbnail" src="{{ membre.thumbnail.src }}" />#}
+{#                                            </div>#}
+{#                                            <div class="col5 membre--item--content {% if loop.index is divisible by(2) %}order-0{% endif %}">#}
+{#                                                <h2 class="membre--item--content--name">{{ membre.title }}</h2>#}
+{#                                                <p class="membre--item--content--text">{{ membre.preview.read_more('') }}</p>#}
+{#                                                <a href="{{ membre.link }}" class="btn membre--item--body--btn">#}
+{#                                                    <hr class="btn--dash" />En savoir plus#}
+{#                                                </a>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                {% endfor %}#}
+{#                            </div>#}
+{#                        </div>#}
+                    </div>
+                    <div class="page--body--content">
+                        {{post.content}}
+                    </div>
+                </div>
+            </section>
+        </article>
+    </div><!-- /content-wrapper -->
+{% endblock %}

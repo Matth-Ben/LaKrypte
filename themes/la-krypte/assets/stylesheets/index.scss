@@ -15,7 +15,10 @@
 
 // Template
 @import "artiste";
-@import "template-homepage";
+@import "templates/template-homepage";
+@import "templates/template-intial";
+@import "templates/template-membre";
+@import "templates/template-projects";
 
 html {
   overflow-x: hidden;
@@ -23,4 +26,9 @@ html {
 
 body {
   margin: auto;
+}
+
+.content {
+  margin: auto;
+  max-width: 1330px;
 }

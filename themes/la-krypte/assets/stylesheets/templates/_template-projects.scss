@@ -1,0 +1,88 @@
+#template-projects {
+  .page {
+    &--content {
+      &--banner {
+        min-height: 400px;
+        height: 30vw;
+        position: relative;
+        &--title {
+          color: $orange;
+          margin: auto;
+          position: relative;
+          z-index: 1;
+          top: 50%;
+          left: 25%;
+        }
+        &--thumbnail {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      &--body {
+        .wp-block-group {
+          max-width: 1330px;
+          margin: auto;
+          padding: 3vw 5vw;
+        }
+      }
+    }
+  }
+}
+
+#projects {
+  padding: 3vw 5vw;
+  .project {
+    &--item {
+      padding: 4vw 0 8vw;
+      .row {
+        align-items: center;
+      }
+      &--content {
+        padding: 0 4vw;
+        &--name {
+          margin: auto;
+          text-transform: uppercase;
+        }
+        &--text {
+          text-align: justify;
+        }
+        &--name,
+        &--text {
+          color: $dark;
+        }
+      }
+      &--img {
+        text-align: center;
+        position: relative;
+        &--thumbnail {
+          position: relative;
+          width: 80%;
+          &--supp {
+            position: absolute;
+            max-width: 40%;
+            bottom: -7vw;
+            left: 1vw;
+            &:first-child {
+              max-width: 30%;
+              bottom: -3vw;
+              right: 4vw;
+              left: auto;
+              z-index: 2;
+            }
+          }
+        }
+      }
+      &--name {
+        margin: 0;
+      }
+    }
+  }
+}
