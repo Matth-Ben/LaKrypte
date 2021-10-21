@@ -202,3 +202,16 @@ add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
 function load_dashicons_front_end() {
     wp_enqueue_style( 'dashicons' );
 }
+
+function pixelvars_add_noscript_filter($tag, $handle, $src){
+    // this filter will run for every enqueued script
+    // we need to check if the handle is equals the script
+    if ( "pixelvars-loading" === $handle ){
+        $noscript = "<noscript>";
+        $noscript .= "<style>#page-overlay{display: none!important;}</style>";
+        $noscript .= "</noscript>";
+        $tag = $tag . $noscript;
+    }
+    return $tag;
+}
+add_filter("script_loader_tag", "pixelvars_add_noscript_filter", 10, 3);

@@ -8,6 +8,11 @@
 
 	<body class="{{body_class}}" data-template="base.twig">
 		<header class="header" >
+			<div id="page-overlay" class="loading">
+				<span aria-hidden="true" aria-label="Loading">
+					Loading ...
+				</span>
+			</div>
 			{% block header %}
 				<div class="wrapper">
 					<h1 class="header--logo" role="banner">
