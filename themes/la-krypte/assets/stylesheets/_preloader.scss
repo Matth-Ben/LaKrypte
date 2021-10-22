@@ -10,13 +10,11 @@
 The page overlay DIV, you can style it as you like,
 */
 #page-overlay {
-  /*
-  basic styles
-  */
-  text-align: center;
-  color: #1e73be;
-  padding-top: 10px;
+  background-color: $dark;
+  color: $orange;
   font-size: .7em;
+  text-align: center;
+  padding-top: 10px;
   display: block;
   background-color: #fefefe;
 

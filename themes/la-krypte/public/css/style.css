@@ -615,13 +615,11 @@ p {
 The page overlay DIV, you can style it as you like,
 */
 #page-overlay {
-  /*
-  basic styles
-  */
-  text-align: center;
-  color: #1e73be;
-  padding-top: 10px;
+  background-color: #0D0D0D;
+  color: #F26E50;
   font-size: 0.7em;
+  text-align: center;
+  padding-top: 10px;
   display: block;
   background-color: #fefefe;
   /*
