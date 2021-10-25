@@ -603,6 +603,136 @@ p {
     order: 1;
   }
 }
+#loading {
+  background-color: #F26E50;
+  display: block;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+#loading .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+#loading .progress-bar__container {
+  width: 80%;
+  height: 2rem;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+  will-change: transform;
+  box-shadow: 0 0 5px #F2A35E;
+}
+#loading .progress-bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-color: #F2A35E;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  border-radius: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: sans-serif;
+}
+#loading .progress-bar__text {
+  display: none;
+}
+#loading .audio-wrapper {
+  display: flex;
+  align-items: flex-end;
+  height: 35px;
+  transform: scale(2.5);
+  position: absolute;
+  left: calc(50% - 25px);
+  top: calc(50% - 35px);
+}
+#loading .audio-wrapper:before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  color: white;
+  font-weight: bold;
+}
+#loading [class^="bar bar-"] {
+  background-color: #edbbb2;
+  width: 4px;
+  margin: 0 1px;
+  border-radius: 3px;
+}
+#loading [class^="bar bar-"].bar-3 {
+  background-color: white;
+}
+#loading .regular [class^="bar bar-"] {
+  animation: lineWave 0.6s both infinite alternate;
+}
+@keyframes lineWave {
+  from {
+    height: 5px;
+  }
+  to {
+    height: 20px;
+  }
+}
+#loading .regular .bar-2 {
+  animation-delay: 0.2s;
+}
+#loading .regular .bar-3 {
+  animation-delay: 0.35s;
+}
+#loading .regular .bar-4 {
+  animation-delay: 0.5s;
+}
+#loading .regular .bar-5 {
+  animation-delay: 0.65s;
+}
+
+.loading-screen {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  background-color: #F26E50;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0) skewX(0);
+  transform-origin: top left;
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
 .lakrypte--block--spotify--content--media {
   height: 100%;
   object-fit: cover;
@@ -1084,38 +1214,6 @@ body {
 .content {
   margin: auto;
   max-width: 1330px;
-}
-
-.loading-screen {
-  position: relative;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  background-color: #4BEDC2;
-  width: 100%;
-  height: 100%;
-  transform: scaleY(0) skewX(0);
-  transform-origin: top left;
-}
-
-.loading-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 9999;
-  pointer-events: none;
-}
-
-.transition-fade {
-  transition: 0.4s;
-  opacity: 1;
-}
-
-html.is-animating .transition-fade {
-  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,7 +6,7 @@
 @import "slide";
 @import "contact";
 @import "grid";
-//@import "preloader";
+@import "preloader";
 
 // Block Guten
 @import "block-guten/block-spotify";
@@ -32,36 +32,4 @@ body {
 .content {
   margin: auto;
   max-width: 1330px;
-}
-
-.loading-screen {
-  position: relative;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  background-color: #4BEDC2;
-  width: 100%;
-  height: 100%;
-  transform: scaleY(0) skewX(0);
-  transform-origin: top left;
-}
-
-.loading-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 9999;
-  pointer-events: none;
-}
-
-.transition-fade {
-  transition: 0.4s;
-  opacity: 1;
-}
-
-html.is-animating .transition-fade {
-  opacity: 0;
 }

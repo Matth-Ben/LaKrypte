@@ -1,5 +1,6 @@
 const loadingScreen = document.querySelector('.loading-screen')
 const mainNavigation = document.querySelector('.header')
+const contentTitle = document.querySelector('.page--content--banner--title')
 
 
 function pageTransitionIn() {
@@ -24,13 +25,8 @@ function contentAnimation(container) {
     $(container.querySelector('.content-wrapper')).addClass('show')
     return gsap
         .timeline()
-        .from(container.querySelector('.is-animated'), {
-            duration: 0.5,
-            translateY: 10,
-            opacity: 0,
-            stagger: 0.4
-        })
         .from(mainNavigation, { duration: .5, translateY: -10, opacity: 0})
+        .from(contentTitle, { duration: .5, translateX: -10, opacity: 0})
 }
 
 $(function() {

@@ -27,3 +27,36 @@ $(document).ready(function() {
 // console.log(document.body.style.getPropertyValue('--slide-per-page'));
 // });
 });
+
+$(window).on('load', function(){
+    setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+});
+function removeLoader(){
+    const progressSound = document.querySelector('.progress-bar');
+
+    const progressBarStates = [0, 7, 27, 34, 68, 80, 95, 100];
+
+    let time = 0;
+    let endState = 100;
+
+    progressBarStates.forEach(state => {
+        let randomTime = Math.floor(Math.random() * 500);
+        setTimeout(() => {
+            if(state == endState){
+                gsap.to(progressSound, {
+                    x: `${state}%`,
+                    duration: 2,
+                    onComplete: () => {
+                        $( "#loading" ).fadeOut();
+                    }
+                });
+            }else{
+                gsap.to(progressSound, {
+                    x: `${state}%`,
+                    duration: 2,
+                });
+            }
+        }, randomTime + time);
+        time += randomTime;
+    })
+}
