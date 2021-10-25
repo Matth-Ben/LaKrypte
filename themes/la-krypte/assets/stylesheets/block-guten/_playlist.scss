@@ -6,18 +6,6 @@
   padding-top: 5vw;
   position: relative;
   width: calc(100% - 20vw);
-  &:after {
-    content: '';
-    background-image: url("../svg/vinyl.svg");
-    width: 40vw;
-    height: 40vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    left: 17vw;
-    right: 0;
-    bottom: 1%;
-  }
   .wp-playlist-current-item {
     overflow: inherit;
     width: 100%;

@@ -7,12 +7,12 @@
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
-		<header class="header" >
-			<div id="page-overlay" class="loading">
-				<span aria-hidden="true" aria-label="Loading">
-					Loading ...
-				</span>
+		<div class="loading-container">
+			<div class="loading-screen">
 			</div>
+		</div>
+
+		<header class="header" >
 			{% block header %}
 				<div class="wrapper">
 					<h1 class="header--logo" role="banner">
@@ -20,24 +20,18 @@
 					</h1>
 					<nav id="header--nav--main" class="header--nav" role="navigation">
 						{% include "menu.twig" with {'items': menu.get_items} %}
-					</nav><!-- #nav -->
+					</nav>
 				</div>
 			{% endblock %}
 		</header>
 
-		<section id="content" role="main" class="content-wrapper">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
+		<div data-barba="wrapper">
+			<section data-barba="container" data-barba-namespace="{{ post.slug }}">
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
-			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
-		</section>
+			</section>
+		</div>
 
 		{% block footer %}
 			<footer id="footer">

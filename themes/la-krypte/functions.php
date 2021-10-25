@@ -170,48 +170,19 @@ new StarterSite();
 remove_action( 'wp_footer', 'wp_underscore_playlist_templates', 0 );
 remove_action( 'admin_footer', 'wp_underscore_playlist_templates', 0 );
 
-add_action( 'wp_footer', 'custom_underscore_playlist_templates', 0 );
-add_action( 'admin_footer', 'custom_underscore_playlist_templates', 0 );
-function custom_underscore_playlist_templates() {
-    ?>
-        <script type="text/html" id="tmpl-wp-playlist-current-item">
-            <div class="wp-playlist-caption">
-                <# if ( data.meta.album ) { #><h2 class="wp-playlist-item-meta wp-playlist-item-album">{{ data.meta.album }}</h2><# } #>
-                <# if ( data.meta.artist ) { #><span class="wp-playlist-item-meta wp-playlist-item-artist">{{ data.meta.artist }}</span><# } #>
-            </div>
-
-            <# if ( data.thumb && data.thumb.src ) { #>
-            {{ console.log(data.thumb) }}
-            <img src="{{ data.thumb.src }}" alt="{{ data.thumb.alt }}" width="600" />
-            <# } #>
-        </script>
-
-        <script type="text/html" id="tmpl-wp-playlist-item">
-            <div class="wp-playlist-item">
-                <a class="wp-playlist-caption" href="{{ data.src }}">
-                    <span class="wp-playlist-item-title">
-                        {{ data.title }}
-                    </span>
-                </a>
-            </div>
-        </script>
-    <?php
-}
-
 add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
 function load_dashicons_front_end() {
     wp_enqueue_style( 'dashicons' );
 }
 
-function pixelvars_add_noscript_filter($tag, $handle, $src){
-    // this filter will run for every enqueued script
-    // we need to check if the handle is equals the script
-    if ( "pixelvars-loading" === $handle ){
-        $noscript = "<noscript>";
-        $noscript .= "<style>#page-overlay{display: none!important;}</style>";
-        $noscript .= "</noscript>";
-        $tag = $tag . $noscript;
+add_filter( 'script_loader_tag', 'my_script_attributes', 10, 3 );
+function my_script_attributes( $tag, $handle, $src )
+{
+    if ( 'tmpl-wp-playlist-item' === $handle ) {
+        $tag = '<script type="text/html" id="tmpl-wp-playlist-item" src="' . esc_url( $src ) . '"></script>';
+    }
+    if ( 'tmpl-wp-playlist-current-item' === $handle ) {
+        $tag = '<script type="text/html" id="tmpl-wp-playlist-current-item" src="' . esc_url( $src ) . '"></script>';
     }
     return $tag;
 }
-add_filter("script_loader_tag", "pixelvars_add_noscript_filter", 10, 3);
