@@ -53,12 +53,8 @@ $(function() {
             namespace: 'homepage',
             beforeEnter(data) {
                 let script = document.createElement('script');
-                let script2 = document.createElement('script');
-                let script3 = document.createElement('script');
                 script.src = 'wp-content/themes/la-krypte/public/js/index.js';
-                script2.src = 'wp-content/themes/la-krypte/public/js/tmpl-wp-playlist-item.js';
-                script3.src = 'wp-content/themes/la-krypte/public/js/tmpl-wp-playlist-current-item.js';
-                data.next.container.appendChild({script, script2, script3});
+                data.next.container.appendChild(script);
             }
         }]
     });
