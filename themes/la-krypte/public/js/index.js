@@ -3,9 +3,7 @@ $(document).ready(function() {
     let slides = document.getElementById('slide--artiste');
     let next = document.getElementById('next');
     let prev = document.getElementById('prev');
-    let slideChildren = slides.children;
     let slideCount = slides.children.length;
-    let currentlyDemoing = false;
     let currentPage = 0;
     let slidesPerPage = () => window.innerWidth > 1700 ? 4 : window.innerWidth > 1200 ? 4 : 2;
     let maxPageCount = () => slideCount / slidesPerPage() - 1;
@@ -29,7 +27,7 @@ $(document).ready(function() {
 });
 
 $(window).on('load', function(){
-    setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+    setTimeout(removeLoader, 500);
 });
 function removeLoader(){
     const progressSound = document.querySelector('.progress-bar');
@@ -40,7 +38,7 @@ function removeLoader(){
     let endState = 100;
 
     progressBarStates.forEach(state => {
-        let randomTime = Math.floor(Math.random() * 500);
+        let randomTime = Math.floor(Math.random());
         setTimeout(() => {
             if(state == endState){
                 gsap.to(progressSound, {
@@ -48,6 +46,7 @@ function removeLoader(){
                     duration: 2,
                     onComplete: () => {
                         $( "#loading" ).fadeOut();
+                        $("body").addClass("animation");
                     }
                 });
             }else{
